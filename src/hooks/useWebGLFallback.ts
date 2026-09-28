@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export type WebGLTier = 0 | 1 | 2 | 3;
 

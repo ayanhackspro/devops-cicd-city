@@ -1,5 +1,4 @@
-import { useRef } from 'react';
-import type { DirectionalLight } from 'three';
+
 
 interface CityLightingProps {
   shadowMapSize: number;

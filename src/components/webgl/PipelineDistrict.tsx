@@ -27,7 +27,7 @@ const BUILDING_CONFIGS: Record<string, { floors: number; width: number; depth: n
 export function PipelineDistrict({
   district,
   isActive,
-  tier,
+  tier: _tier,
   onClick,
   onPointerOver,
   onPointerOut,

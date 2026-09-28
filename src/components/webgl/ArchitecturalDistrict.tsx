@@ -532,7 +532,7 @@ interface ArchitecturalDistrictProps {
 }
 
 export function ArchitecturalDistrict({
-  district, isActive, tier, onClick, onPointerOver, onPointerOut,
+  district, isActive, tier: _tier, onClick, onPointerOver, onPointerOut,
 }: ArchitecturalDistrictProps) {
   const [hovered, setHovered] = useState(false);
   const Building = BUILDING_MAP[district.id];

@@ -9,8 +9,7 @@
  * - Trunks tapered with slight rotation variation
  */
 
-import { useMemo, useRef } from 'react';
-import { Object3D, InstancedMesh } from 'three';
+import { useMemo } from 'react';
 
 // ── TREE DEFINITIONS ──────────────────────────────────────────────────────
 // Each entry: world pos, scale, species, rotation on Y axis

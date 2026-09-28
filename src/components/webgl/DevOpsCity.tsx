@@ -15,7 +15,7 @@ interface DevOpsCityProps {
   tier: WebGLTier;
   activeDistrict: string | null;
   onDistrictClick: (id: string) => void;
-  onDistrictHover: (id: string | null) => void;
+  onDistrictHover?: (id: string | null) => void;
 }
 
 function LoadingScreen() {
@@ -120,8 +120,8 @@ export function DevOpsCity({ tier, activeDistrict, onDistrictClick, onDistrictHo
             isHovered={false}
             tier={tier}
             onClick={() => onDistrictClick(district.id)}
-            onPointerOver={() => onDistrictHover(district.id)}
-            onPointerOut={() => onDistrictHover(null)}
+            onPointerOver={() => onDistrictHover?.(district.id)}
+            onPointerOut={() => onDistrictHover?.(null)}
           />
         ))}
 

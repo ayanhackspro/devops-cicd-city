@@ -17,7 +17,6 @@ interface HeroSectionProps {
 
 export function HeroSection({ tier, webglSupported }: HeroSectionProps) {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   const activeDistrict = activeId ? DISTRICTS.find((d) => d.id === activeId) ?? null : null;
 
@@ -46,7 +45,6 @@ export function HeroSection({ tier, webglSupported }: HeroSectionProps) {
                 tier={tier}
                 activeDistrict={activeId}
                 onDistrictClick={(id) => setActiveId((prev) => (prev === id ? null : id))}
-                onDistrictHover={setHoveredId}
               />
             </Suspense>
           </div>

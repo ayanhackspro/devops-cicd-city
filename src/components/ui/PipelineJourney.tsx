@@ -1,4 +1,3 @@
-import { useRef, useEffect } from 'react';
 import styles from './PipelineJourney.module.css';
 import { DISTRICTS } from '../../data/districts';
 import { useInView } from '../../hooks/useUtils';
