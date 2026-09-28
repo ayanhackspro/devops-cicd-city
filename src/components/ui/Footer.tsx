@@ -26,7 +26,12 @@ export function Footer() {
         {/* Top */}
         <div className={styles.top}>
           <div className={styles.brand}>
-            <span className={styles.brandName}>DEVOPS & CI/CD PIPELINES</span>
+            <img
+              src="/logo-horizontal-dark.png"
+              alt="DevOps & CI/CD Pipelines"
+              className={styles.brandLogo}
+              height={42}
+            />
             <span className={styles.brandSub}>THE CITY THAT SHIPS SOFTWARE</span>
           </div>
           <nav className={styles.columns} aria-label="Footer navigation">

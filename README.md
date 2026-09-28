@@ -4,7 +4,9 @@ An interactive 3D WebGL isometric metropolis and architectural dashboard represe
 
 Built with **React 19**, **Three.js**, **@react-three/fiber**, **@react-three/drei**, and **Vite**.
 
-![DevOps CI/CD City Preview](./public/vite.svg)
+<p align="center">
+  <img src="./public/logo.png" alt="DevOps CI/CD City Logo" width="480" />
+</p>
 
 ---
 

@@ -27,6 +27,33 @@
   gap: var(--space-8);
 }
 
+/* Brand Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 10px);
+  text-decoration: none;
+  transition: opacity var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.brand:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.brandLogo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .brandLogo {
+    height: 30px;
+  }
+}
+
 /* Wordmark */
 .wordmark {
   font-family: var(--font-ui);

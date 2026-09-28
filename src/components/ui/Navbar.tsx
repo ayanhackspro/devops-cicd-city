@@ -22,10 +22,14 @@ export function Navbar() {
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} role="banner">
       <nav className={styles.inner} aria-label="Primary navigation">
-        {/* Wordmark */}
-        <a href="/" className={styles.wordmark} aria-label="DevOps & CI/CD Pipelines — Home">
-          <span className={styles.wordmarkMain}>DEVOPS</span>
-          <span className={styles.wordmarkSub}> / CI/CD SYSTEMS</span>
+        {/* Site Brand & Logo */}
+        <a href="/" className={styles.brand} aria-label="DevOps & CI/CD Pipelines — Home">
+          <img
+            src="/logo-horizontal.png"
+            alt="DevOps & CI/CD Pipelines"
+            className={styles.brandLogo}
+            height={38}
+          />
         </a>
 
         {/* Desktop links */}

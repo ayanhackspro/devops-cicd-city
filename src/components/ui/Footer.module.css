@@ -26,6 +26,14 @@
   gap: var(--space-4);
 }
 
+.brandLogo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  align-self: flex-start;
+  margin-bottom: var(--space-2);
+}
+
 .brandName {
   font-family: var(--font-ui);
   font-size: 0.78rem;
