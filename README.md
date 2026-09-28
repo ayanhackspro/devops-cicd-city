@@ -8,6 +8,8 @@ Built with **React 19**, **Three.js**, **@react-three/fiber**, **@react-three/dr
   <img src="./public/logo.png" alt="DevOps CI/CD City Logo" width="480" />
 </p>
 
+> 🏆 **Presenting at a Hackathon?** Check out the [**Hackathon Pitch & Judge's Guide (HACKATHON.md)**](./HACKATHON.md) for the 30-second elevator pitch, 3-minute live demo walkthrough script, and judging criteria alignment!
+
 ---
 
 ## 🌟 Highlights
