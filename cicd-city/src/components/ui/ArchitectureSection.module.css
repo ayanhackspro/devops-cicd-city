@@ -1,0 +1,207 @@
+.section {
+  background: var(--arch-ivory-alt);
+  padding: var(--space-32) 0;
+  scroll-margin-top: 50px;
+}
+
+.container {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 540px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--arch-charcoal);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: var(--space-4);
+}
+
+.desc {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--arch-concrete);
+  line-height: 1.65;
+}
+
+/* Lifecycle flow */
+.lifecycle {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  -webkit-overflow-scrolling: touch;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.lifecycleVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lifecycleItem {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.lifecycleNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.lifecycleNum {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--arch-copper);
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-light-mid);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--arch-ivory);
+  flex-shrink: 0;
+}
+
+.lifecycleContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 var(--space-4);
+  min-width: 100px;
+  margin-top: 6px;
+}
+
+.lifecycleStep {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--arch-charcoal);
+  text-transform: uppercase;
+}
+
+.lifecycleDesc {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  color: var(--arch-concrete);
+  white-space: nowrap;
+}
+
+.lifecycleConnector {
+  width: 32px;
+  height: 1px;
+  background: var(--border-light-mid);
+  margin-top: 14px;
+  flex-shrink: 0;
+}
+
+/* Principles */
+.principles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.principlesTitle {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--arch-concrete);
+}
+
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.principleCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-12);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  background: var(--arch-ivory);
+  transition: border-color var(--duration-fast) ease;
+}
+
+.principleCard:hover {
+  border-color: var(--border-light-hover);
+}
+
+.principleLabel {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--arch-charcoal);
+  text-transform: uppercase;
+}
+
+.principleDesc {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--arch-concrete);
+  line-height: 1.55;
+}
+
+/* Callout */
+.callout {
+  border-left: 2px solid var(--arch-copper);
+  padding: var(--space-12) var(--space-16);
+  background: rgba(184,107,75,0.04);
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  max-width: 640px;
+}
+
+.calloutText {
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  color: var(--arch-charcoal);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: var(--space-4);
+}
+
+.calloutCite {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--arch-copper);
+  font-style: normal;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .principlesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .principlesGrid { grid-template-columns: 1fr; }
+  .lifecycle { gap: var(--space-4); }
+}

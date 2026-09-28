@@ -1,0 +1,212 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Inner container is pointer-events: none so clicks on text or whitespace
+   pass through directly to the 3D WebGL city underneath! */
+.inner {
+  padding: var(--space-24) var(--container-padding) var(--space-32);
+  max-width: 760px;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* Eyebrow */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  pointer-events: none;
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--arch-copper);
+}
+
+.slash {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: rgba(244,241,234,0.35);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: rgba(244,241,234,0.6);
+  text-transform: uppercase;
+}
+
+/* Headline */
+.headline {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  margin-bottom: var(--space-8);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+}
+
+.headlineMain {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 800;
+  color: #F4F1EA;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.4);
+}
+
+.headlineAmp {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 400;
+  color: rgba(244,241,234,0.75);
+  margin-left: 2px;
+}
+
+.headlineSub {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 800;
+  color: #F4F1EA;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.4);
+}
+
+/* Tagline */
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  color: rgba(244,241,234,0.55);
+  text-transform: uppercase;
+  margin-bottom: var(--space-12);
+  pointer-events: none;
+}
+
+/* Pipeline row — interactive stage triggers */
+.pipeline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-20);
+  pointer-events: none;
+}
+
+.stageGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stageButton {
+  pointer-events: auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(11, 13, 14, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(244, 241, 234, 0.18);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.60rem;
+  letter-spacing: 0.12em;
+  color: rgba(244, 241, 234, 0.75);
+  text-transform: uppercase;
+  transition: all var(--duration-fast) ease;
+}
+
+.stageButton:hover {
+  background: rgba(11, 13, 14, 0.85);
+  border-color: rgba(244, 241, 234, 0.55);
+  color: #F4F1EA;
+  transform: translateY(-1px);
+}
+
+.stageActive {
+  background: rgba(11, 13, 14, 0.90) !important;
+  border-color: var(--stage-accent, #D6B36A) !important;
+  color: #F4F1EA !important;
+  box-shadow: 0 0 12px rgba(214, 179, 106, 0.35);
+}
+
+.stageIndex {
+  font-size: 0.52rem;
+  color: rgba(244, 241, 234, 0.45);
+  font-weight: 500;
+}
+
+.stageName {
+  font-weight: 600;
+}
+
+.arrow {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: rgba(244,241,234,0.25);
+  pointer-events: none;
+}
+
+/* CTA */
+.cta {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: rgba(244,241,234,0.7);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid rgba(244,241,234,0.2);
+  border-radius: var(--radius-lg);
+  background: rgba(244,241,234,0.06);
+  backdrop-filter: blur(4px);
+  transition: border-color var(--duration-fast) ease,
+              background var(--duration-fast) ease,
+              color var(--duration-fast) ease;
+}
+
+.cta:hover {
+  border-color: rgba(244,241,234,0.45);
+  background: rgba(244,241,234,0.12);
+  color: #F4F1EA;
+}
+
+.cta svg {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta svg { animation: none; }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .inner { padding: var(--space-16) var(--container-padding) var(--space-24); }
+  .pipeline { display: none; }
+}
+
+@media (max-width: 420px) {
+  .tagline { display: none; }
+}

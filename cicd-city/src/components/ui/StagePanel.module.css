@@ -1,0 +1,236 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(11,13,14,0.4);
+  z-index: 200;
+  cursor: pointer;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(480px, 100vw);
+  background: var(--arch-ivory);
+  z-index: 201;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-left: 1px solid var(--border-light-mid);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 0;
+  background: var(--arch-ivory);
+  z-index: 1;
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.headerIndex {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--arch-copper);
+}
+
+.headerSlash {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--arch-concrete);
+}
+
+.headerType {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  color: var(--arch-concrete);
+  text-transform: uppercase;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--arch-concrete);
+  background: none;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color var(--duration-fast) ease,
+              border-color var(--duration-fast) ease;
+}
+
+.closeBtn:hover {
+  color: var(--arch-charcoal);
+  border-color: var(--border-light-hover);
+}
+
+/* Name block */
+.nameBlock {
+  padding: 32px 20px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.districtName {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 800;
+  color: var(--accent, var(--arch-charcoal));
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+/* Description */
+.description {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--arch-concrete);
+  line-height: 1.7;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Sublabels */
+.sublabelsSection {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sublabelsEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--arch-concrete);
+  text-transform: uppercase;
+}
+
+.sublabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sublabel {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--arch-charcoal);
+  padding: 3px 10px;
+  border: 1px solid var(--border-light-mid);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  transition: border-color var(--duration-fast) ease;
+}
+
+.sublabel:hover {
+  border-color: var(--border-light-hover);
+}
+
+/* Commands terminal */
+.commands {
+  margin: 16px 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.termHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: var(--bg-surface-elevated);
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.termDots {
+  display: flex;
+  gap: 5px;
+}
+
+.termTitle {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  margin-left: auto;
+  letter-spacing: 0.06em;
+}
+
+.termBody {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cmdLine {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.prompt {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-green);
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.cmd {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+/* District indicator */
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  margin-top: auto;
+  border-top: 1px solid var(--border-light);
+}
+
+.indicatorDot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.indicatorLabel {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: var(--arch-concrete);
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel { transition: none !important; }
+}

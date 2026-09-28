@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd cicd-city && npm install && npm run build",
+  "outputDirectory": "cicd-city/dist"
+}
